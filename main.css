@@ -1,0 +1,548 @@
+
+@import url(http://fonts.googleapis.com/css?family=Lobster:400,300,700)
+
+.row {
+ 	height: 350px;
+}
+
+/*LOGO*/
+
+.background-body { 
+ 	background-image: url(images/2.jpg);
+}
+
+
+
+@-webkit-keyframes flip {
+    from { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); }
+    to { -webkit-transform: rotateY(180deg); transform: rotateY(180deg); }
+}
+
+@keyframes flip {
+    from { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); }
+    to { -webkit-transform: rotateY(180deg); transform: rotateY(180deg); }
+}
+
+
+
+
+/* entire container, keeps perspective */
+.flip-container {
+  	perspective: 1000;
+}
+
+.flip-container, .front, .back {
+	width: 300px;
+	height: 300px;
+	border-radius: 25%;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+	-webkit-animation-name: flip;
+	animation-name: flip;
+	-webkit-animation-duration: 0.6s;
+	animation-duration: 0.6s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-delay: 3s;
+	animation-delay: 2s;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.myImg {	
+	box-shadow: 5px 5px;
+	border-radius: 25%;
+
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	box-shadow: 5px 5px; 
+}
+
+/* back, initially hidden pane */
+.back {
+  	transform: rotateY(180deg);
+  	background: #F29B46;
+  	box-shadow: 5px 5px;
+}
+
+
+.preamble {
+	position : absolute;
+	padding : 60px 20px;
+	font-size: 40px;
+	opacity:0;
+	top:10%;
+	animation-name: fade;
+ 	animation-delay: 0s;
+ 	animation-duration: 4s;
+ 	font-family: Lobster;
+ 	color: purple;
+}
+
+.preamble1 {
+	position : absolute;
+	padding : 60px 20px;
+	font-size: 40px;
+	opacity:0;
+	top:20%;
+	left: 5%;
+	animation-name: fade;
+	animation-delay: 4s;
+	animation-duration: 3s;
+	font-family: Lobster;
+	color: purple;
+}
+
+.preamble2 {
+	position : absolute;
+	padding : 60px 20px;
+	font-size: 40px;
+	top:10%;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 8s;
+	animation-duration: 3s;
+	font-family: Lobster;	
+	color: purple;
+}
+
+
+
+.first-txt {
+	position : absolute;
+	padding : 60px 20px;
+	font-size: 40px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 12s;
+	animation-duration: 4s;
+	font-family: Lobster;	
+	color: purple;
+}
+
+
+.second-txt {
+	position : absolute;
+	top:20%;
+	font-size: 40px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 16s;
+	animation-duration: 4s;
+	font-family: Lobster;	
+	color: purple;
+}
+
+.third-txt {
+	position : absolute;
+	top:10%;
+	font-size: 40px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 20s;
+	animation-duration: 4s;	
+	font-family: Lobster;
+	color: purple;	
+}
+
+.fourth-txt {
+	position : absolute;
+	top:20%;
+	font-size: 40px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 24s;
+	animation-duration: 4s;
+	font-family: Lobster;
+	color: purple;		
+}
+
+.fifth-txt {
+	position : absolute;
+	top:10%;
+	font-size: 40px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 28s;
+	animation-duration: 4s;
+	font-family: Lobster;
+	color: purple;		
+}
+
+
+.sixth-txt {
+	position : absolute;
+	top:0%;
+	font-size: 40px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 32s;
+	animation-duration: 4s;
+	font-family: Lobster;
+	color: purple;		
+}
+
+
+.end {
+	position : absolute;
+	padding : 60px 20px;
+	font-size: 40px;
+	opacity:0;
+	top:20%;
+	left:10%;
+	animation-name: fade;
+	animation-delay: 36s;
+	animation-duration: 3s;
+	font-family: Lobster;	
+	color: purple;
+}
+
+.end1 {
+	position : absolute;
+	padding : 60px 20px;
+	font-size: 40px;
+	opacity:0;
+	top:-10%;
+	animation-name: fade;
+	animation-delay: 40s;
+	animation-duration: 3s;
+	font-family: Lobster;	
+	color: purple;	
+}
+
+.end2 {
+	position : absolute;
+	padding : 60px 20px;
+	font-size: 40px;
+	opacity:0;
+	top:20%;
+	animation-name: fade;
+	animation-delay: 44s;
+	animation-duration: 3s;
+	font-family: Lobster;	
+	color: purple;	
+}
+
+.end3 {
+	position : absolute;
+	padding : 60px 20px;
+	font-size: 40px;
+	opacity:0;
+	top:-10%;
+	animation-name: fade;
+	animation-delay: 48s;
+	animation-duration: 3s;
+	font-family: Lobster;
+	color: purple;		
+}
+
+.end4 {
+	position : absolute;
+	padding : 60px 20px;
+	font-size: 40px;
+	opacity:0;
+	top:20%;
+	left: 15%;
+	animation-name: fade1;
+	animation-delay: 52s;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	font-family: Lobster;
+	color: purple;	
+}
+
+.wantyou{	
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 44s;
+	animation-duration: 3s;
+}
+
+
+/*STORY*/
+
+#myButton {
+	position: absolute;
+	padding: 10px 10px;
+  	font-size: 20px;
+	font-family: Lobster;	
+	text-align: center;
+	color: blue;
+	cursor: pointer;
+	outline: none; 
+  	background-color: purple;
+  	border-radius: 15px;
+  	box-shadow: 0 9px #999;
+	top: 90%;
+	left: 30%;		
+}
+
+#myButton:hover {
+	background-color: #4B0082;
+	animation-play-state: running;	
+}
+
+#myButton:active {
+	background-color: #4B0082;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+  	text-decoration: none;
+}
+
+/* ACTUAL STORY*/
+
+.fat-image {
+	width: 300px;
+	height: 190px;
+	border-radius: 40%;
+	box-shadow: 5px 5px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 12s;
+	animation-duration: 4s;	  
+}
+
+.recognized {
+	width: 300px;
+	border-radius: 40%;
+	box-shadow: 5px 5px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 32s;
+	animation-duration: 4s;	
+}
+
+.training {
+	width: 300px;
+	border-radius: 40%;
+	box-shadow: 5px 5px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 16s;
+	animation-duration: 4s;	
+}
+
+.in-shape{
+	width: 300px;
+	border-radius: 40%;
+	box-shadow: 5px 5px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 28s;
+	animation-duration: 4s;	
+}
+
+.challanges {
+	width: 300px;
+	border-radius: 40%;
+	box-shadow: 5px 5px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 20s;
+	animation-duration: 4s;	
+}
+
+.temptation {
+	width: 300px;
+	border-radius: 40%;
+	box-shadow: 5px 5px;
+	opacity:0;
+	animation-name: fade;
+	animation-delay: 24s;
+	animation-duration: 4s;	
+}
+
+.thumb {
+	opacity:0;
+	animation-name: fade1;
+	animation-delay: 52s;
+	animation-duration: 4s;
+	 animation-fill-mode: forwards;
+}
+
+
+
+@keyframes fade {
+	0%{
+		opacity:0;
+	}
+	3%{
+		opacity:0.12;
+	}
+	6%{
+		opacity:0.25;
+	}
+	9%{
+		opacity:0.37;
+	}
+	12% {
+		opacity:0.5;
+	}
+	15%{
+		opacity:0.62;
+	}
+	18%{
+		opacity:0.75;
+	}
+	21%{
+		opacity:0.87;
+	}
+	24%{
+		opacity: 1;
+	}
+	76%{
+   		opacity: 1;
+	}
+	79%{
+		opacity:0.87;
+	}
+	82%{
+		opacity:0.75;
+	}
+	85%{
+		opacity:0.62;
+	}
+	88%{
+		opacity:0.5;
+	}
+	91%{
+		opacity:0.37;
+	}
+	94%{
+		opacity:0.25;
+	}
+	97%{
+		opacity:0.12;
+	}
+	100%{
+		opacity:0;
+	}
+}
+
+@keyframes fade1 {
+	0%{
+		opacity:0;
+	}
+	3%
+	{
+		opacity:0.12;
+	}
+	6%{
+		opacity:0.25;
+	}
+	9%{
+		opacity:0.37;
+	}
+	12% {
+		opacity:0.5;
+	}
+	15%{
+		opacity:0.62;
+	}
+	18%{
+		opacity:0.75;
+	}
+	21%{
+		opacity:0.87;
+	}
+	24%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
+/* Footer */
+footer {
+	background-color:#222;
+}
+
+.Micc {
+	border-radius: 25%;
+}
+
+p {
+	color: white;
+}
+
+.fa {
+   	padding: 20px;
+   	font-size: 30px;
+   	width: 50px;
+   	text-align: center;
+   	text-decoration: none;
+   	margin: 5px 2px;
+   	border-radius: 25%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
+    color: white ;    
+}
+
+.fa-facebook {
+  	background: #3B5998;
+  	color: white;
+}
+
+.fa-linkedin {
+  	background: #007bb5;
+  	color: white;
+}
+
+.fa-github {
+  	background: purple;
+  	color: white;
+}
+
+/* Survey Form */
+.modal-body {
+	background-image: url(images/gym5.jpg);
+}
+
+.modal-header {	
+	background-color: purple;
+}
+
+.modal-footer {
+	background-color: purple;
+}
+
+.p {
+	color: black; 
+	font-weight : bold;
+	font-family: Modern;
+}
+
+#op {
+	background: rgba(200, 247, 197, 0.6);
+	border:1px black;
+	border-radius: 25px;
+}
+
+.form-row{
+	margin: auto;
+}
+
+.giphy-embed{
+	margin:auto;
+}
